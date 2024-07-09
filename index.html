@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DICE ROLLER</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div>
+    
+    <div class="container">
         <img src="dice.png" class="img-dice" id="img-dice"/>
+        <button onclick="roll()" class="btn">Roll the dice</button>
     </div>
+
+    <script>
+        function roll() {
+            const randomNumber = Math.floor(Math.random() * (7-1) + 1)
+            const imgElement = document.getElementById("img-dice")
+
+            switch(randomNumber){
+                case 1:
+                    imgElement.src = "one.png"
+                break
+                case 2:
+                    imgElement.src = "two.png"
+                break
+                case 3:
+                    imgElement.src = "three.png"
+                break
+                case 4:
+                    imgElement.src = "four.png"
+                break
+                case 5:
+                    imgElement.src = "five.png"
+                break
+                case 6:
+                    imgElement.src = "six.png"
+                break
+                
+            }
+        }
+    </script>
 </body>
 </html>
